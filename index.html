@@ -1,60 +1,178 @@
                                                                                                                                                                                                                                                                                 <!DOCTYPE html> <!-- This tells the browser what kind of file we're writing-->
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title> jmys portfolio</title>
- <link href=<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
- <link href="style.css" rel="stylesheet">
- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jmy's Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #a18cd1 0%, #6a82fb 100%);
+      min-height: 100vh;
+    }
+    .glass {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(5px);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(31,38,135,0.12);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .skill-bar {
+      background: #eee;
+      border-radius: 8px;
+      position: relative;
+      margin-bottom: 1rem;
+      height: 24px;
+      overflow: hidden;
+      max-width: 220px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .skill-bar-fill {
+      height: 100%;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #a18cd1, #6a82fb);
+      width: 0;
+      line-height: 24px;
+      color: #fff;
+      font-weight: 600;
+      text-align: right;
+      padding-right: 1rem;
+      transition: width 1.5s cubic-bezier(0.7,0,0.4,1);
+    }
+    .contact-icons .btn {
+      min-width: 120px;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 576px) {
+      .glass { padding: 1rem;}
+    }
+  </style>
 </head>
- <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">J'myJ</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-        <a class="nav-link" href="index.html#about">about me </a>
-        <a class="nav-link" href="index.html#skills">skills</a>
-         <a class="nav-link" href="testimonials.html">Testimonial</a>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">J'myJ</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          <a class="nav-link" href="#about">About Me</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="testimonials.html">Testimonials</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<body>
-     <section id="home" class="hero"
-        <img src="babytron-scaled.jpeg" alt="my profile picture"/>
-       <h2> hi, i am <span class="accent"> jmy jenkins </span></h2>
-       <p> I'm a highschool student learning web development! </p>
-    </section>
-     
-    <section id="about" class="section"> 
-    <h2> about me </h2> 
-    <p>  I was born on September 23 2009.  i want to play college basketball at high level with a scholarship so i could study psychology and become a therapist/ psychiatrist i would also like to become a pro basketball player i am a leader and good team player with a stron work ethic thats on and off the court</p>
-    </section>
+  <!-- Hero Section -->
+  <section id="home" class="text-center py-5 bg-light glass">
+    <img src="babytron-scaled.jpeg" alt="Jmy Jenkins profile picture" class="rounded-circle mb-3" width="180" height="180">
+    <h2>Hi, I am <span class="text-primary fw-bold">Jmy Jenkins</span></h2>
+    <p class="lead">I'm a high school student learning web development!</p>
+  </section>
 
-<section id="skills" class="section"> 
-    <h2> My skills </h2>
-    <div\v class="grid">
-        <div> HTML</div>
-        <div> CSS</div>
-        <div>JavaScript</div>
+  <!-- About Section -->
+  <section id="about" class="container py-5 glass">
+    <h2 class="mb-3">About Me</h2>
+    <p>
+      I was born on September 23, 2009. I want to play college basketball at a high level with a scholarship so I can study psychology and become a therapist/psychiatrist. I would also like to become a pro basketball player. I'm a leader and a good team player with a strong work ethic both on and off the court.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="bg-light py-5 glass">
+    <div class="container">
+      <h2 class="mb-3 text-center">My Skills</h2>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <i class="fab fa-html5 fa-3x text-danger mb-2"></i>
+          <div class="fw-bold">HTML</div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-percent="95%">95%</div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <i class="fab fa-css3-alt fa-3x text-primary mb-2"></i>
+          <div class="fw-bold">CSS</div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-percent="85%">85%</div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <i class="fab fa-js-square fa-3x text-warning mb-2"></i>
+          <div class="fw-bold">JavaScript</div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-percent="70%">70%</div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section id="contacts" class="section"
-            <h1>contact me ;]</h1> 
-            
-              <h3>jmyjenkins10@gmail.com</h3>
-              <h3> 929 725 6821</h3>
+  <!-- Contact Section (No Google Maps!) -->
+  <section id="contact" class="container py-5 my-4 glass">
+    <h2 class="mb-4 text-center">Contact Me <span aria-label="waving hand" role="img">👋</span></h2>
+    <div class="row">
+      <!-- Contact Details and Socials -->
+      <div class="col-lg-5 mb-4">
+        <div class="bg-white rounded shadow-sm p-4 h-100">
+          <h5 class="fw-bold mb-3">Get in touch</h5>
+          <p class="mb-2"><i class="fas fa-envelope text-primary"></i> <a href="mailto:jmyjenkins10@gmail.com" class="fw-bold">jmyjenkins10@gmail.com</a></p>
+          <p class="mb-2"><i class="fas fa-phone text-success"></i> <a href="tel:9297256821" class="fw-bold">929 725 6821</a></p>
+          <p class="mb-2"><i class="fas fa-map-marker-alt text-danger"></i> New York, NY</p>
+          <div class="contact-icons mt-3">
+            <a href="https://github.com/Jmyjenkins" target="_blank" class="btn btn-dark btn-sm me-2"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://instagram.com/1000waystowin_" target="_blank" class="btn btn-danger btn-sm me-2"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#" class="btn btn-info btn-sm me-2"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="#" class="btn btn-primary btn-sm"><i class="fab fa-twitter"></i> Twitter</a>
+          </div>
+        </div>
+      </div>
+      <!-- Contact Form -->
+      <div class="col-lg-7 mb-4">
+        <div class="bg-white rounded shadow-sm p-4 h-100">
+          <h5 class="fw-bold mb-3">Send me a message</h5>
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="jmy jenkins" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="jmyjenkins10@gmail.com" required>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script> </body>"
-    <script src="script.js"></script> 
+  <footer class="text-center py-3 bg-light glass">
+    &copy; 2025 Jmy Jenkins. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script>
+    // Animate skill bars
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll('.skill-bar-fill').forEach(function(bar) {
+        setTimeout(function() {
+          bar.style.width = bar.getAttribute('data-percent');
+        }, 600);
+      });
+    });
+  </script>
+  <script src="script.js"></script>
 </body>
-
 </html>
